@@ -45,14 +45,15 @@ const config = {
     "/onboard",
     "/token",
     "/login/verify",
-    "/hello",
     "/filter",
+    "/bulkedit",
   ],
   authLayouts: [
     //pages that does not require auth
     "/login",
     "/hello",
     "/filter",
+    "/bulkedit",
   ],
 };
 
