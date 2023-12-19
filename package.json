@@ -1,0 +1,37 @@
+{
+  "name": "share-a-sale",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/next-js": "^2.1.5",
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@faker-js/faker": "^8.1.0",
+    "@next/font": "^13.5.4",
+    "@tanstack/react-table": "^8.10.3",
+    "axios": "^1.5.1",
+    "framer-motion": "^10.16.4",
+    "next": "13.5.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.11.0",
+    "react-loader-spinner": "^5.4.5",
+    "react-table": "^7.8.0",
+    "styled-components": "^6.0.8",
+    "zustand": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.17",
+    "dotenv": "^16.3.1",
+    "typescript": "^5.3.3"
+  }
+}
