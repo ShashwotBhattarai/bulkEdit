@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Table, Form, Button } from "react-bootstrap";
+import { Table, Tbody, Td, Th, Thead, Tr, Input, Button, VStack } from "@chakra-ui/react";
 
 const ProductTable = () => {
   const fetchedProducts: any[] = [
@@ -164,41 +164,41 @@ const ProductTable = () => {
   const columns = ["tags", "vendor", "product_type", "published_scope"];
 
   return (
-    <div>
-      <Button variant="primary" onClick={handleShowEdits}>
+    <VStack spacing={4} align="stretch">
+      <Button colorScheme="teal" onClick={handleShowEdits}>
         Show Edits
-      </Button>{" "}
-      <Button variant="success" onClick={handleSave} disabled={!editsExist}>
+      </Button>
+      <Button colorScheme="green" onClick={handleSave} isDisabled={!editsExist}>
         Save
-      </Button>{" "}
-      <Button variant="danger" onClick={handleDiscard} disabled={!editsExist}>
+      </Button>
+      <Button colorScheme="red" onClick={handleDiscard} isDisabled={!editsExist}>
         Discard
-      </Button>{" "}
-      <Table striped bordered hover responsive>
-        <thead>
-          <tr>
+      </Button>
+      <Table variant="striped" colorScheme="teal">
+        <Thead>
+          <Tr>
             {columns.map((column) => (
-              <th key={column}>{column}</th>
+              <Th key={column}>{column}</Th>
             ))}
-          </tr>
-        </thead>
-        <tbody>
+          </Tr>
+        </Thead>
+        <Tbody>
           {editableProducts.map((product) => (
-            <tr key={product._id}>
+            <Tr key={product._id}>
               {columns.map((column) => (
-                <td key={column} className={product.edited ? "edited" : ""}>
-                  <Form.Control
+                <Td key={column} className={product.edited ? "edited" : ""}>
+                  <Input
                     type="text"
                     value={product[column]}
                     onChange={(e) => handleFieldChange(product._id, column, e.target.value)}
                   />
-                </td>
+                </Td>
               ))}
-            </tr>
+            </Tr>
           ))}
-        </tbody>
+        </Tbody>
       </Table>
-    </div>
+    </VStack>
   );
 };
 
